@@ -1,5 +1,5 @@
 """
-ShadowLure Base Service Module
+Mephala Base Service Module
 
 Abstract base class for all honeypot services.
 Defines the interface and common functionality for SSH, HTTP, FTP honeypots.

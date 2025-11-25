@@ -1,4 +1,4 @@
-"""ShadowLure ML Module - Machine learning threat classification engine."""
+"""Mephala ML Module - Machine learning threat classification engine."""
 
 from ml.preprocessor import AttackPreprocessor, CommandAnalyzer, IPFeatureExtractor
 from ml.models import AttackClassifier, AnomalyDetector, ModelMetrics

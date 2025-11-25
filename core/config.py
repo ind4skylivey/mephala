@@ -1,5 +1,5 @@
 """
-ShadowLure Configuration Module
+Mephala Configuration Module
 
 Configuration parser with YAML/ENV support and validation.
 Uses Pydantic for type validation and settings management.
@@ -68,7 +68,7 @@ class DatabaseConfig(BaseSettings):
 
     model_config = SettingsConfigDict(env_prefix="DATABASE_")
 
-    url: str = "postgresql+asyncpg://shadowlure:shadowlure@localhost:5432/shadowlure"
+    url: str = "postgresql+asyncpg://mephala:mephala@localhost:5432/mephala"
     pool_size: int = 10
     max_overflow: int = 20
     echo: bool = False
@@ -110,7 +110,7 @@ class LoggingConfig(BaseSettings):
 
     level: str = "INFO"
     format: str = "json"
-    file: Optional[str] = "data/logs/shadowlure.log"
+    file: Optional[str] = "data/logs/mephala.log"
     max_size_mb: int = 100
     backup_count: int = 5
     console_output: bool = True
@@ -164,7 +164,7 @@ class Config(BaseSettings):
     )
 
     # Environment
-    env: str = Field(default="development", alias="SHADOWLURE_ENV")
+    env: str = Field(default="development", alias="MEPHALA_ENV")
     debug: bool = Field(default=False, alias="DEBUG")
 
     # Sub-configurations
@@ -226,7 +226,7 @@ def load_config(yaml_path: Optional[str | Path] = None) -> Config:
     if yaml_path:
         _config = Config.from_yaml(yaml_path)
     else:
-        config_path = os.getenv("SHADOWLURE_CONFIG")
+        config_path = os.getenv("MEPHALA_CONFIG")
         if config_path and Path(config_path).exists():
             _config = Config.from_yaml(config_path)
         else:

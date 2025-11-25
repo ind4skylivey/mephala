@@ -54,7 +54,7 @@ async def seed_users():
     async with get_session() as session:
         admin = User(
             username="admin",
-            email="admin@shadowlure.local",
+            email="admin@mephala.local",
             hashed_password=hash_password("admin123"),
             is_admin=True,
         )
@@ -176,7 +176,7 @@ async def seed_http_requests(attack_ids: list[int]):
 
 
 async def main():
-    print("ShadowLure Database Seeder")
+    print("Mephala Database Seeder")
     print("=" * 40)
 
     config = load_config()

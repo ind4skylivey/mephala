@@ -1,11 +1,11 @@
 version: "3.8"
 
 services:
-  shadowlure:
+  mephala:
     build:
       context: ..
       dockerfile: docker/Dockerfile
-    container_name: shadowlure
+    container_name: mephala
     restart: unless-stopped
     ports:
       - "2222:2222"   # SSH honeypot
@@ -14,67 +14,67 @@ services:
       - "2121:2121"   # FTP honeypot
       - "8000:8000"   # API
     environment:
-      - SHADOWLURE_ENV=production
-      - DATABASE_URL=postgresql+asyncpg://shadowlure:${DB_PASSWORD:-shadowlure}@postgres:5432/shadowlure
+      - MEPHALA_ENV=production
+      - DATABASE_URL=postgresql+asyncpg://mephala:${DB_PASSWORD:-mephala}@postgres:5432/mephala
       - REDIS_URL=redis://redis:6379/0
       - API_SECRET_KEY=${API_SECRET_KEY:-change-this-in-production}
       - LOG_LEVEL=INFO
       - LOG_FORMAT=json
     volumes:
-      - shadowlure_data:/app/data
-      - shadowlure_models:/app/ml/models
+      - mephala_data:/app/data
+      - mephala_models:/app/ml/models
     depends_on:
       postgres:
         condition: service_healthy
       redis:
         condition: service_healthy
     networks:
-      - shadowlure_network
+      - mephala_network
     command: ["python", "core/honeypot.py"]
 
   api:
     build:
       context: ..
       dockerfile: docker/Dockerfile
-    container_name: shadowlure-api
+    container_name: mephala-api
     restart: unless-stopped
     ports:
       - "8001:8000"
     environment:
-      - SHADOWLURE_ENV=production
-      - DATABASE_URL=postgresql+asyncpg://shadowlure:${DB_PASSWORD:-shadowlure}@postgres:5432/shadowlure
+      - MEPHALA_ENV=production
+      - DATABASE_URL=postgresql+asyncpg://mephala:${DB_PASSWORD:-mephala}@postgres:5432/mephala
       - REDIS_URL=redis://redis:6379/0
       - API_SECRET_KEY=${API_SECRET_KEY:-change-this-in-production}
     volumes:
-      - shadowlure_data:/app/data:ro
-      - shadowlure_models:/app/ml/models:ro
+      - mephala_data:/app/data:ro
+      - mephala_models:/app/ml/models:ro
     depends_on:
       - postgres
       - redis
     networks:
-      - shadowlure_network
+      - mephala_network
 
   postgres:
     image: postgres:15-alpine
-    container_name: shadowlure-db
+    container_name: mephala-db
     restart: unless-stopped
     environment:
-      - POSTGRES_USER=shadowlure
-      - POSTGRES_PASSWORD=${DB_PASSWORD:-shadowlure}
-      - POSTGRES_DB=shadowlure
+      - POSTGRES_USER=mephala
+      - POSTGRES_PASSWORD=${DB_PASSWORD:-mephala}
+      - POSTGRES_DB=mephala
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U shadowlure"]
+      test: ["CMD-SHELL", "pg_isready -U mephala"]
       interval: 10s
       timeout: 5s
       retries: 5
     networks:
-      - shadowlure_network
+      - mephala_network
 
   redis:
     image: redis:7-alpine
-    container_name: shadowlure-redis
+    container_name: mephala-redis
     restart: unless-stopped
     volumes:
       - redis_data:/data
@@ -84,24 +84,24 @@ services:
       timeout: 5s
       retries: 5
     networks:
-      - shadowlure_network
+      - mephala_network
 
   dashboard:
     build:
       context: ../dashboard
       dockerfile: Dockerfile
-    container_name: shadowlure-dashboard
+    container_name: mephala-dashboard
     restart: unless-stopped
     ports:
       - "3000:80"
     depends_on:
       - api
     networks:
-      - shadowlure_network
+      - mephala_network
 
   nginx:
     image: nginx:alpine
-    container_name: shadowlure-nginx
+    container_name: mephala-nginx
     restart: unless-stopped
     ports:
       - "80:80"
@@ -113,14 +113,14 @@ services:
       - api
       - dashboard
     networks:
-      - shadowlure_network
+      - mephala_network
 
 volumes:
   postgres_data:
   redis_data:
-  shadowlure_data:
-  shadowlure_models:
+  mephala_data:
+  mephala_models:
 
 networks:
-  shadowlure_network:
+  mephala_network:
     driver: bridge

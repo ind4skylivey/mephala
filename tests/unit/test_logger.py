@@ -31,7 +31,7 @@ class TestLogProcessors:
     def test_add_service_context_default(self):
         event_dict = {"event": "test"}
         result = add_service_context(None, "info", event_dict)
-        assert result["service"] == "shadowlure"
+        assert result["service"] == "mephala"
 
     def test_add_service_context_existing(self):
         event_dict = {"event": "test", "service": "ssh"}

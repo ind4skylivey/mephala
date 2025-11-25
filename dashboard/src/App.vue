@@ -4,7 +4,7 @@
       <div class="max-w-7xl mx-auto px-4">
         <div class="flex items-center justify-between h-16">
           <div class="flex items-center">
-            <span class="text-xl font-bold text-primary">ShadowLure</span>
+            <span class="text-xl font-bold text-primary">Mephala</span>
             <div class="ml-10 flex space-x-4">
               <router-link to="/" class="nav-link">Dashboard</router-link>
               <router-link to="/attacks" class="nav-link">Attacks</router-link>

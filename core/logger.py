@@ -1,5 +1,5 @@
 """
-ShadowLure Logging Module
+Mephala Logging Module
 
 Centralized structured logging system with async support.
 Supports JSON and text formatting, file rotation, and console output.
@@ -34,7 +34,7 @@ def add_service_context(
 ) -> EventDict:
     """Add service context if available."""
     if "service" not in event_dict:
-        event_dict["service"] = "shadowlure"
+        event_dict["service"] = "mephala"
     return event_dict
 
 
@@ -217,7 +217,7 @@ class ServiceLogger:
 
     def __init__(self, service_name: str, service_port: int):
         self._logger = get_logger(
-            f"shadowlure.{service_name}",
+            f"mephala.{service_name}",
             service=service_name,
             port=service_port,
         )

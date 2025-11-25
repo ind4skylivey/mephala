@@ -31,7 +31,7 @@ async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
         log_file=config.logging.file,
     )
 
-    logger.info("Starting ShadowLure API server")
+    logger.info("Starting Mephala API server")
 
     await init_database(
         database_url=config.database.url,
@@ -51,7 +51,7 @@ def create_app() -> FastAPI:
     config = get_config()
 
     app = FastAPI(
-        title="ShadowLure API",
+        title="Mephala API",
         description="Intelligent Honeypot System API",
         version="1.0.0",
         docs_url="/docs" if config.api.debug else None,
@@ -73,7 +73,7 @@ def create_app() -> FastAPI:
 
     @app.get("/health")
     async def health_check():
-        return {"status": "healthy", "service": "shadowlure-api"}
+        return {"status": "healthy", "service": "mephala-api"}
 
     return app
 

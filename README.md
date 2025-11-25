@@ -1,120 +1,118 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/👁️-SHADOWLURE-0d1117?style=for-the-badge&labelColor=ff0040" alt="ShadowLure"/>
+  <img src="https://img.shields.io/badge/🕷️-MEPHALA-8b5cf6?style=for-the-badge&labelColor=0d0d0d" alt="Mephala"/>
 </p>
 
 <h1 align="center">
-  <code style="color: #ff0040;">⬡ ShadowLure ⬡</code>
+  <code>༺ MEPHALA ༻</code>
 </h1>
 
 <p align="center">
-  <strong>Advanced Deception Platform with ML-Powered Threat Intelligence</strong>
+  <strong>Daedric Deception Platform</strong><br/>
+  <sub>ML-Powered Threat Intelligence Honeypot</sub>
 </p>
 
 <p align="center">
-  <sub>
-    <em>"In the shadows, we watch. In the lure, they fall."</em>
-  </sub>
+  <em>"Secrets are her domain. Lies are her web. All who enter... are caught."</em>
 </p>
 
 <br/>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/python-3.10+-ff0040?style=flat-square&logo=python&logoColor=white&labelColor=0d1117" alt="Python"/>
-  <img src="https://img.shields.io/badge/asyncio-native-ff0040?style=flat-square&logo=python&logoColor=white&labelColor=0d1117" alt="AsyncIO"/>
-  <img src="https://img.shields.io/badge/fastapi-0.108+-ff0040?style=flat-square&logo=fastapi&logoColor=white&labelColor=0d1117" alt="FastAPI"/>
-  <img src="https://img.shields.io/badge/vue.js-3.4+-ff0040?style=flat-square&logo=vue.js&logoColor=white&labelColor=0d1117" alt="Vue.js"/>
-  <img src="https://img.shields.io/badge/docker-ready-ff0040?style=flat-square&logo=docker&logoColor=white&labelColor=0d1117" alt="Docker"/>
+  <img src="https://img.shields.io/badge/python-3.10+-8b5cf6?style=flat-square&logo=python&logoColor=white&labelColor=0d0d0d" alt="Python"/>
+  <img src="https://img.shields.io/badge/asyncio-native-8b5cf6?style=flat-square&logo=python&logoColor=white&labelColor=0d0d0d" alt="AsyncIO"/>
+  <img src="https://img.shields.io/badge/fastapi-0.108+-8b5cf6?style=flat-square&logo=fastapi&logoColor=white&labelColor=0d0d0d" alt="FastAPI"/>
+  <img src="https://img.shields.io/badge/vue.js-3.4+-8b5cf6?style=flat-square&logo=vue.js&logoColor=white&labelColor=0d0d0d" alt="Vue.js"/>
+  <img src="https://img.shields.io/badge/docker-ready-8b5cf6?style=flat-square&logo=docker&logoColor=white&labelColor=0d0d0d" alt="Docker"/>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/tests-155_passing-00ff88?style=flat-square&labelColor=0d1117" alt="Tests"/>
-  <img src="https://img.shields.io/badge/ML-Random_Forest-00d4ff?style=flat-square&labelColor=0d1117" alt="ML"/>
-  <img src="https://img.shields.io/badge/license-MIT-ff0040?style=flat-square&labelColor=0d1117" alt="License"/>
+  <img src="https://img.shields.io/badge/tests-155_passing-a855f7?style=flat-square&labelColor=0d0d0d" alt="Tests"/>
+  <img src="https://img.shields.io/badge/ML-Random_Forest-c084fc?style=flat-square&labelColor=0d0d0d" alt="ML"/>
+  <img src="https://img.shields.io/badge/license-MIT-8b5cf6?style=flat-square&labelColor=0d0d0d" alt="License"/>
 </p>
 
 <br/>
 
 ```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                                                                             │
-│   ███████╗██╗  ██╗ █████╗ ██████╗  ██████╗ ██╗    ██╗██╗     ██╗   ██╗██████╗███████╗   │
-│   ██╔════╝██║  ██║██╔══██╗██╔══██╗██╔═══██╗██║    ██║██║     ██║   ██║██╔══██╗██╔════╝  │
-│   ███████╗███████║███████║██║  ██║██║   ██║██║ █╗ ██║██║     ██║   ██║██████╔╝█████╗    │
-│   ╚════██║██╔══██║██╔══██║██║  ██║██║   ██║██║███╗██║██║     ██║   ██║██╔══██╗██╔══╝    │
-│   ███████║██║  ██║██║  ██║██████╔╝╚██████╔╝╚███╔███╔╝███████╗╚██████╔╝██║  ██║███████╗  │
-│   ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝  ╚═════╝  ╚══╝╚══╝ ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝  │
-│                                                                             │
-│                    [ DECEPTION WARFARE SYSTEM v1.0 ]                        │
-│                                                                             │
-└─────────────────────────────────────────────────────────────────────────────┘
+                            ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+                         ▄█▀                               ▀█▄
+                       ▄█▀   ███╗   ███╗███████╗██████╗  ██╗  ██╗ █████╗ ██╗      █████╗    ▀█▄
+                      █▀    ████╗ ████║██╔════╝██╔══██╗██║  ██║██╔══██╗██║     ██╔══██╗     ▀█
+                     █▌     ██╔████╔██║█████╗  ██████╔╝███████║███████║██║     ███████║      ▐█
+                     █▌     ██║╚██╔╝██║██╔══╝  ██╔═══╝ ██╔══██║██╔══██║██║     ██╔══██║      ▐█
+                      █▄    ██║ ╚═╝ ██║███████╗██║     ██║  ██║██║  ██║███████╗██║  ██║     ▄█
+                       ▀█▄  ╚═╝     ╚═╝╚══════╝╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝   ▄█▀
+                         ▀█▄                                                             ▄█▀
+                            ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+                                     ╔═══════════════════════════════╗
+                                     ║   DAEDRIC PRINCE OF SECRETS   ║
+                                     ║      The Webspinner v1.0      ║
+                                     ╚═══════════════════════════════╝
 ```
 
 ---
 
-## ◈ Overview
+## ༺ The Web ༻
 
-**ShadowLure** is a high-interaction deception platform engineered to simulate vulnerable network services, harvest attack intelligence, and classify threats in real-time using machine learning.
+**Mephala** — named after the Daedric Prince of secrets, lies, and hidden plots — is a high-interaction deception platform that weaves a web of fake services to ensnare attackers and harvest their secrets.
 
 ```
-                              ┌──────────────┐
-                              │   ATTACKER   │
-                              └──────┬───────┘
-                                     │
-                    ┌────────────────┼────────────────┐
-                    ▼                ▼                ▼
-             ┌──────────┐     ┌──────────┐     ┌──────────┐
-             │   SSH    │     │   HTTP   │     │   FTP    │
-             │  :2222   │     │  :8080   │     │  :2121   │
-             │ ◉ TRAP   │     │ ◉ TRAP   │     │ ◉ TRAP   │
-             └────┬─────┘     └────┬─────┘     └────┬─────┘
-                  │                │                │
-                  └────────────────┼────────────────┘
-                                   ▼
-                         ┌─────────────────┐
-                         │  ⚡ ML ENGINE   │
-                         │  Classification │
-                         │  Anomaly Detect │
-                         └────────┬────────┘
-                                  ▼
-                    ┌─────────────────────────┐
-                    │     ◈ SHADOWLURE DB     │
-                    │  PostgreSQL + Redis     │
-                    └─────────────┬───────────┘
-                                  ▼
-                         ┌────────────────┐
-                         │   DASHBOARD    │
-                         │   Real-time    │
-                         │   Intelligence │
-                         └────────────────┘
+                                    ┌─────────────┐
+                                    │   ATTACKER  │
+                                    └──────┬──────┘
+                                           │
+                          ╔════════════════╧════════════════╗
+                          ║         MEPHALA'S WEB           ║
+                          ╚════════════════╤════════════════╝
+                                           │
+                    ┌──────────────────────┼──────────────────────┐
+                    │                      │                      │
+              ┌─────┴─────┐          ┌─────┴─────┐          ┌─────┴─────┐
+              │    SSH    │          │   HTTP    │          │    FTP    │
+              │   :2222   │          │   :8080   │          │   :2121   │
+              │  ◈ TRAP   │          │  ◈ TRAP   │          │  ◈ TRAP   │
+              └─────┬─────┘          └─────┬─────┘          └─────┬─────┘
+                    │                      │                      │
+                    └──────────────────────┼──────────────────────┘
+                                           │
+                                    ┌──────┴──────┐
+                                    │  🕷️ ML      │
+                                    │  CLASSIFIER │
+                                    └──────┬──────┘
+                                           │
+                                    ┌──────┴──────┐
+                                    │  KNOWLEDGE  │
+                                    │    VAULT    │
+                                    └─────────────┘
 ```
 
 ---
 
-## ◈ Arsenal
+## ༺ Artifacts ༻
 
 <table>
 <tr>
 <td width="50%">
 
-### 🔐 SSH Deception
+### 🔐 SSH Web
 ```
-◉ Credential harvesting
-◉ Fake shell (25+ commands)
-◉ Virtual filesystem
-◉ Session recording
-◉ Payload detection
+◈ Credential harvesting
+◈ Fake shell (25+ commands)
+◈ Virtual filesystem
+◈ Session recording
+◈ Malicious payload detection
 ```
 
 </td>
 <td width="50%">
 
-### 🌐 HTTP Deception
+### 🌐 HTTP Web
 ```
-◉ WordPress simulation
-◉ phpMyAdmin traps
-◉ SQLi/XSS/RCE detection
-◉ File upload capture
-◉ Request forensics
+◈ WordPress simulation
+◈ phpMyAdmin traps
+◈ SQLi/XSS/RCE detection
+◈ File upload capture
+◈ Request forensics
 ```
 
 </td>
@@ -122,25 +120,25 @@
 <tr>
 <td width="50%">
 
-### 📁 FTP Deception
+### 📁 FTP Web
 ```
-◉ Anonymous access traps
-◉ Passive/Active modes
-◉ Malware quarantine
-◉ Transfer logging
-◉ Directory traversal detection
+◈ Anonymous access traps
+◈ Passive/Active modes
+◈ Malware quarantine
+◈ Transfer logging
+◈ Path traversal detection
 ```
 
 </td>
 <td width="50%">
 
-### 🧠 ML Classification
+### 🕷️ ML Classification
 ```
-◉ Random Forest classifier
-◉ Isolation Forest anomaly
-◉ Real-time threat scoring
-◉ Auto-labeling pipeline
-◉ Model versioning
+◈ Random Forest classifier
+◈ Isolation Forest anomaly
+◈ Real-time threat scoring
+◈ Auto-labeling pipeline
+◈ Model versioning
 ```
 
 </td>
@@ -149,181 +147,189 @@
 
 ---
 
-## ◈ Deployment
+## ༺ Summoning ༻
 
 ### Docker (Recommended)
 
 ```bash
-# Clone
-git clone https://github.com/ind4skylivey/shadowlure.git
-cd shadowlure
+# Clone the artifact
+git clone https://github.com/ind4skylivey/mephala.git
+cd mephala
 
-# Configure
+# Configure the ritual
 cp .env.example .env
 nano .env  # Set your secrets
 
-# Deploy
+# Summon
 cd docker && docker-compose up -d
 
-# Monitor
-docker-compose logs -f shadowlure
+# Observe the web
+docker-compose logs -f mephala
 ```
 
-### Manual
+### Manual Ritual
 
 ```bash
-git clone https://github.com/ind4skylivey/shadowlure.git
-cd shadowlure
+git clone https://github.com/ind4skylivey/mephala.git
+cd mephala
 
-# Setup
+# Prepare
 chmod +x scripts/setup.sh && ./scripts/setup.sh
 
-# Database
+# Initialize vault
 alembic upgrade head
 
-# Launch (3 terminals)
-python core/honeypot.py                        # Honeypots
-uvicorn api.server:app --reload --port 8000    # API
-cd dashboard && npm install && npm run dev     # Dashboard
+# Spin the web (3 terminals)
+python core/honeypot.py                        # Traps
+uvicorn api.server:app --reload --port 8000    # Interface
+cd dashboard && npm install && npm run dev     # Vision
 ```
 
 ---
 
-## ◈ Architecture
+## ༺ Architecture ༻
 
 ```
-shadowlure/
-├── core/                   # ◈ System nucleus
-│   ├── base_service.py     #   Abstract honeypot class
-│   ├── config.py           #   Pydantic configuration
-│   ├── database.py         #   SQLAlchemy async ORM
-│   ├── honeypot.py         #   Main orchestrator
-│   └── logger.py           #   Structured logging
+mephala/
+├── core/                   # ◈ The Heart
+│   ├── base_service.py     #   Abstract trap class
+│   ├── config.py           #   Configuration weave
+│   ├── database.py         #   Knowledge vault
+│   ├── honeypot.py         #   Web orchestrator
+│   └── logger.py           #   Secret keeper
 │
-├── services/               # ◈ Deception layer
-│   ├── ssh_honeypot.py     #   SSH with asyncssh
-│   ├── http_honeypot.py    #   HTTP with aiohttp
-│   ├── ftp_honeypot.py     #   FTP with asyncio
-│   └── utils/              #   Fake FS, templates
+├── services/               # ◈ The Threads
+│   ├── ssh_honeypot.py     #   SSH silk
+│   ├── http_honeypot.py    #   HTTP silk
+│   ├── ftp_honeypot.py     #   FTP silk
+│   └── utils/              #   Illusions
 │
-├── ml/                     # ◈ Intelligence engine
-│   ├── preprocessor.py     #   Feature extraction
-│   ├── models.py           #   RF + Isolation Forest
-│   ├── trainer.py          #   Training pipeline
-│   └── predictor.py        #   Real-time classification
+├── ml/                     # ◈ The Spider
+│   ├── preprocessor.py     #   Pattern sensing
+│   ├── models.py           #   Prey classification
+│   ├── trainer.py          #   Learning hunger
+│   └── predictor.py        #   Strike prediction
 │
-├── api/                    # ◈ Command interface
-│   ├── server.py           #   FastAPI factory
-│   ├── auth.py             #   JWT authentication
-│   └── routes/             #   REST endpoints
+├── api/                    # ◈ The Voice
+│   ├── server.py           #   Whisper gateway
+│   ├── auth.py             #   Trust verification
+│   └── routes/             #   Secret paths
 │
-├── dashboard/              # ◈ Tactical display
+├── dashboard/              # ◈ The Eye
 │   └── src/
-│       ├── components/     #   UI components
-│       ├── views/          #   Pages
-│       └── stores/         #   State management
+│       ├── components/     #   Vision fragments
+│       ├── views/          #   Sight windows
+│       └── stores/         #   Memory threads
 │
-└── docker/                 # ◈ Containerization
-    ├── Dockerfile          #   Multi-stage build
-    └── docker-compose.yml  #   Orchestration
+└── docker/                 # ◈ The Vessel
+    ├── Dockerfile          #   Container form
+    └── docker-compose.yml  #   Summoning circle
 ```
 
 ---
 
-## ◈ Threat Classification
+## ༺ Prey Classification ༻
 
-| Type | Indicator | Severity |
-|:-----|:----------|:--------:|
-| `reconnaissance` | Port scanning, enumeration | 🟢 |
-| `brute_force` | Credential stuffing | 🟡 |
-| `sql_injection` | Database manipulation | 🔴 |
-| `xss` | Cross-site scripting | 🟡 |
-| `rce` | Remote code execution | ⚫ |
-| `path_traversal` | Directory escape | 🟠 |
-| `credential_theft` | Password harvesting | 🟠 |
+| Type | Pattern | Severity |
+|:-----|:--------|:--------:|
+| `reconnaissance` | Probing the web | 🟢 |
+| `brute_force` | Forcing entry | 🟡 |
+| `sql_injection` | Corrupting knowledge | 🔴 |
+| `xss` | Injecting venom | 🟡 |
+| `rce` | Seizing control | ⚫ |
+| `path_traversal` | Escaping threads | 🟠 |
+| `credential_theft` | Stealing secrets | 🟠 |
 
 ---
 
-## ◈ API Endpoints
+## ༺ Interface ༻
 
 ```bash
-# Authentication
-POST /api/v1/auth/login     # Get JWT token
+# Obtain trust
+POST /api/v1/auth/login
 
-# Intelligence
-GET  /api/v1/attacks        # List attacks (paginated)
-GET  /api/v1/attacks/{id}   # Attack details
-POST /api/v1/attacks/search # Advanced search
+# Query the web
+GET  /api/v1/attacks        # List captured
+GET  /api/v1/attacks/{id}   # Examine prey
+POST /api/v1/attacks/search # Hunt specific
 
-# Analytics
-GET  /api/v1/stats/overview    # Dashboard stats
-GET  /api/v1/stats/timeline    # Attack frequency
-GET  /api/v1/stats/geographic  # Geo distribution
+# Read the patterns
+GET  /api/v1/stats/overview    # Web status
+GET  /api/v1/stats/timeline    # Activity threads
+GET  /api/v1/stats/geographic  # Origin mapping
 
-# Real-time
-WS   /ws/live               # WebSocket feed
+# Live vision
+WS   /ws/live               # Real-time feed
 ```
 
 ---
 
-## ◈ Access Points
+## ༺ Access Points ༻
 
-| Service | Port | Description |
-|:--------|:----:|:------------|
-| SSH Trap | `2222` | Credential harvester |
-| HTTP Trap | `8080` | Web attack detector |
-| FTP Trap | `2121` | File transfer monitor |
-| API | `8000` | REST interface |
-| Dashboard | `3000` | Tactical display |
+| Thread | Port | Purpose |
+|:-------|:----:|:--------|
+| SSH Trap | `2222` | Credential web |
+| HTTP Trap | `8080` | Request web |
+| FTP Trap | `2121` | Transfer web |
+| API | `8000` | Command interface |
+| Dashboard | `3000` | The All-Seeing Eye |
 
 ---
 
-## ◈ Testing
+## ༺ Testing ༻
 
 ```bash
-# Full suite
+# Verify the web
 pytest tests/ -v
 
 # With coverage
 pytest tests/ --cov=core --cov=services --cov=ml
 
-# Results: 155 tests passing ✓
+# ✓ 155 threads intact
 ```
 
 ---
 
-## ◈ Legal
+## ༺ Warning ༻
 
 ```
-⚠️  AUTHORIZED USE ONLY
+⚠️  BY THE DAEDRIC COVENANT
 
-This software is designed for:
-  → Security research on owned infrastructure
-  → Authorized penetration testing
-  → Educational purposes
+This artifact is bound for:
+  → Authorized security research
+  → Permitted penetration testing
+  → Educational enlightenment
 
-Deploy only on networks you own or have explicit permission.
-The authors assume no liability for misuse.
+Deploy only upon domains you rightfully control.
+The Webspinner assumes no liability for misuse.
+Those who abuse the gift shall face their own web.
 ```
 
 ---
 
-## ◈ License
+## ༺ License ༻
 
 ```
 MIT License
 Copyright (c) 2024 ind4skylivey
+
+"In the name of Mephala, secrets are kept,
+ and lies are woven into truth."
 ```
 
 ---
 
 <p align="center">
   <sub>
-    <strong>◈ ShadowLure ◈</strong><br/>
-    <em>Deception is the art of war.</em>
+    <strong>༺ MEPHALA ༻</strong><br/>
+    <em>The Webspinner sees all. The web catches all.</em>
   </sub>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Built_by-ind4skylivey-ff0040?style=for-the-badge&labelColor=0d1117"/>
+  <img src="https://img.shields.io/badge/Woven_by-ind4skylivey-8b5cf6?style=for-the-badge&labelColor=0d0d0d"/>
+</p>
+
+<p align="center">
+  <sub>🕷️ Inspired by The Elder Scrolls V: Skyrim 🕷️</sub>
 </p>

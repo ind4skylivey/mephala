@@ -1,5 +1,5 @@
 """
-ShadowLure Database Module
+Mephala Database Module
 
 SQLAlchemy async ORM models and session management.
 Implements the complete database schema for attack logging and analysis.

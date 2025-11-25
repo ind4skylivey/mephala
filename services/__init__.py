@@ -1,4 +1,4 @@
-"""ShadowLure Services Module - Honeypot service implementations."""
+"""Mephala Services Module - Honeypot service implementations."""
 
 from services.ssh_honeypot import SSHHoneypot
 from services.http_honeypot import HTTPHoneypot

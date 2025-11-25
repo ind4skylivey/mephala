@@ -15,7 +15,7 @@ PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
 
 cd "$PROJECT_DIR"
 
-log_info "Setting up ShadowLure..."
+log_info "Setting up Mephala..."
 
 if ! command -v python3 &> /dev/null; then
     log_error "Python 3 is required but not installed."

@@ -1,4 +1,4 @@
-# ShadowLure Main Configuration
+# Mephala Main Configuration
 # Override with environment variables using uppercase names (e.g., SSH_PORT=2222)
 
 env: development
@@ -43,7 +43,7 @@ ftp:
   anonymous_enabled: true
 
 database:
-  url: "postgresql+asyncpg://shadowlure:shadowlure@localhost:5432/shadowlure"
+  url: "postgresql+asyncpg://mephala:mephala@localhost:5432/mephala"
   pool_size: 10
   max_overflow: 20
   echo: false
@@ -64,7 +64,7 @@ api:
 logging:
   level: "INFO"
   format: "json"
-  file: "data/logs/shadowlure.log"
+  file: "data/logs/mephala.log"
   max_size_mb: 100
   backup_count: 5
   console_output: true

@@ -1,1 +1,1 @@
-"""ShadowLure Test Suite."""
+"""Mephala Test Suite."""
