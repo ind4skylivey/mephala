@@ -57,7 +57,7 @@ def upgrade() -> None:
         sa.Column("asn", sa.Integer(), nullable=True),
         sa.Column("isp", sa.String(255), nullable=True),
         sa.Column("raw_log", sa.Text(), nullable=True),
-        sa.Column("metadata", postgresql.JSONB(), nullable=True),
+        sa.Column("extra_data", postgresql.JSONB(), nullable=True),
         sa.PrimaryKeyConstraint("id"),
         sa.CheckConstraint("severity BETWEEN 1 AND 10", name="ck_attacks_severity"),
     )

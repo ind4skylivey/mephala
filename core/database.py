@@ -29,6 +29,19 @@ from sqlalchemy import (
     func,
 )
 from sqlalchemy.dialects.postgresql import JSONB
+from sqlalchemy.types import TypeDecorator
+
+
+class JSONType(TypeDecorator):
+    """Platform-agnostic JSON type that uses JSONB on PostgreSQL and JSON on others."""
+
+    impl = JSON
+    cache_ok = True
+
+    def load_dialect_impl(self, dialect):
+        if dialect.name == "postgresql":
+            return dialect.type_descriptor(JSONB())
+        return dialect.type_descriptor(JSON())
 from sqlalchemy.ext.asyncio import (
     AsyncEngine,
     AsyncSession,
@@ -85,7 +98,7 @@ class Attack(Base):
 
     # Raw data storage
     raw_log: Mapped[Optional[str]] = mapped_column(Text)
-    metadata: Mapped[Optional[dict]] = mapped_column(JSONB)
+    extra_data: Mapped[Optional[dict]] = mapped_column(JSONType)
 
     # Relationships
     credentials: Mapped[list["Credential"]] = relationship(
@@ -156,7 +169,7 @@ class HttpRequest(Base):
     query_string: Mapped[Optional[str]] = mapped_column(Text)
 
     # Headers and body
-    headers: Mapped[Optional[dict]] = mapped_column(JSONB)
+    headers: Mapped[Optional[dict]] = mapped_column(JSONType)
     body: Mapped[Optional[str]] = mapped_column(Text)
     body_size: Mapped[Optional[int]] = mapped_column(Integer)
 
@@ -250,7 +263,7 @@ class File(Base):
     is_malware: Mapped[bool] = mapped_column(Boolean, default=False)
     malware_family: Mapped[Optional[str]] = mapped_column(String(100))
     virustotal_detections: Mapped[Optional[int]] = mapped_column(Integer)
-    virustotal_results: Mapped[Optional[dict]] = mapped_column(JSONB)
+    virustotal_results: Mapped[Optional[dict]] = mapped_column(JSONType)
 
     # MIME type detection
     mime_type: Mapped[Optional[str]] = mapped_column(String(100))
@@ -334,8 +347,8 @@ class MlModel(Base):
     # Model storage
     model_path: Mapped[Optional[str]] = mapped_column(String(500))
     model_data: Mapped[Optional[bytes]] = mapped_column(LargeBinary)
-    hyperparameters: Mapped[Optional[dict]] = mapped_column(JSONB)
-    feature_names: Mapped[Optional[dict]] = mapped_column(JSONB)
+    hyperparameters: Mapped[Optional[dict]] = mapped_column(JSONType)
+    feature_names: Mapped[Optional[dict]] = mapped_column(JSONType)
 
     __table_args__ = (
         UniqueConstraint("name", "version", name="uq_ml_models_name_version"),

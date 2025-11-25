@@ -61,18 +61,18 @@ class TestAttackModel:
         assert isinstance(attack.timestamp, datetime)
 
     @pytest.mark.asyncio
-    async def test_attack_metadata_jsonb(self, db_session):
-        metadata = {"user_agent": "test", "headers": {"X-Custom": "value"}}
+    async def test_attack_extra_data_jsonb(self, db_session):
+        extra_data = {"user_agent": "test", "headers": {"X-Custom": "value"}}
         attack = Attack(
             source_ip="10.0.0.1",
             service_type="http",
-            metadata=metadata,
+            extra_data=extra_data,
         )
         db_session.add(attack)
         await db_session.commit()
         await db_session.refresh(attack)
 
-        assert attack.metadata == metadata
+        assert attack.extra_data == extra_data
 
 
 class TestCredentialModel:

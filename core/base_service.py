@@ -142,7 +142,7 @@ class BaseHoneypotService(ABC):
         severity: Optional[int] = None,
         duration_seconds: Optional[float] = None,
         raw_log: Optional[str] = None,
-        metadata: Optional[dict] = None,
+        extra_data: Optional[dict] = None,
     ) -> Attack:
         """
         Record an attack in the database.
@@ -155,7 +155,7 @@ class BaseHoneypotService(ABC):
             severity: Severity level (1-10)
             duration_seconds: Duration of the attack session
             raw_log: Raw log data
-            metadata: Additional metadata as JSON
+            extra_data: Additional data as JSON
 
         Returns:
             The created Attack record
@@ -172,7 +172,7 @@ class BaseHoneypotService(ABC):
                 severity=severity,
                 duration_seconds=Decimal(str(duration_seconds)) if duration_seconds else None,
                 raw_log=raw_log,
-                metadata=metadata or {},
+                extra_data=extra_data or {},
             )
             session.add(attack)
             await session.flush()
@@ -468,6 +468,7 @@ class BaseHoneypotService(ABC):
             "union select",
             "' or '1'='1",
             "'; drop",
+            "; drop",
             "1=1",
             "' or 1=1",
             "\" or 1=1",
@@ -501,7 +502,7 @@ class BaseHoneypotService(ABC):
         """Detect potential path traversal patterns."""
         if not path:
             return False
-        patterns = ["../", "..\\", "%2e%2e/", "%2e%2e\\", "....//"]
+        patterns = ["../", "..\\", "%2e%2e%2f", "%2e%2e/", "%2e%2e\\", "....//"]
         path_lower = path.lower()
         return any(p in path_lower for p in patterns)
 
