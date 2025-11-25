@@ -1,10 +1,171 @@
-# Byte-compiled / optimized / DLL files
+# ============================================================================
+# HONEYTRAP SECURITY-HARDENED .GITIGNORE
+# Prevents code leakage, secret exposure, and unauthorized replication
+# ============================================================================
+
+# ============================================================================
+# CRITICAL SECURITY - SECRETS & CREDENTIALS
+# ============================================================================
+
+# Environment files (contain API keys, passwords, secrets)
+.env
+.env.*
+*.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+.envrc
+
+# Secret files
+*.secret
+*.secrets
+secrets/
+.secrets/
+secrets.yml
+secrets.yaml
+secrets.json
+credentials.json
+credentials.yml
+
+# API keys and tokens
+**/api_key*
+**/apikey*
+**/*token*
+**/*secret*
+!**/token*.py
+!**/secret*.py
+
+# AWS credentials
+.aws/
+aws.json
+aws_credentials
+
+# SSH keys and certificates
+*.pem
+*.key
+*.crt
+*.csr
+*.p12
+*.pfx
+*.cer
+id_rsa*
+id_ed25519*
+id_ecdsa*
+known_hosts
+authorized_keys
+data/ssh_keys/
+certs/
+ssl/
+
+# ============================================================================
+# CAPTURED DATA - ATTACK INTELLIGENCE (NEVER SHARE)
+# ============================================================================
+
+# Captured credentials and passwords
+**/captured_*
+**/credentials_dump*
+**/passwords*
+**/hashes*
+loot/
+
+# Uploaded malware and payloads
+data/uploads/
+data/quarantine/
+quarantine/
+uploads/
+malware/
+payloads/
+samples/
+
+# Attack logs and forensic data
+data/logs/
+logs/
+*.log
+attack_logs/
+forensics/
+captures/
+
+# Session recordings
+sessions/
+recordings/
+*.pcap
+*.pcapng
+
+# GeoIP databases (proprietary)
+*.mmdb
+GeoLite2-*.tar.gz
+geoip/
+
+# ============================================================================
+# TRAINED ML MODELS (PROPRIETARY - PREVENT REPLICATION)
+# ============================================================================
+
+# Trained model files
+ml/models/*.pkl
+ml/models/*.joblib
+ml/models/*.h5
+ml/models/*.onnx
+ml/models/*.pt
+ml/models/*.pth
+ml/models/*.pb
+ml/models/*.tflite
+ml/models/classifier_*
+ml/models/anomaly_*
+ml/models/preprocessor_*
+
+# Model metadata and metrics
+ml/models/*.json
+ml/models/*.yaml
+ml/models/metrics/
+
+# Training data (sensitive attack patterns)
+ml/data/
+training_data/
+datasets/
+*.csv
+*.parquet
+!requirements*.txt
+
+# Model checkpoints
+checkpoints/
+*.ckpt
+
+# ============================================================================
+# DATABASE FILES (ATTACK DATA)
+# ============================================================================
+
+# SQLite databases
+*.db
+*.sqlite
+*.sqlite3
+data/*.db
+
+# Database dumps
+*.sql
+*.dump
+backups/
+db_backups/
+
+# Redis dumps
+*.rdb
+*.aof
+dump.rdb
+
+# ============================================================================
+# PYTHON ARTIFACTS
+# ============================================================================
+
+# Byte-compiled files
 __pycache__/
 *.py[cod]
 *$py.class
+*.pyo
 
 # C extensions
 *.so
+*.dylib
+*.dll
 
 # Distribution / packaging
 .Python
@@ -23,100 +184,192 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+MANIFEST
 
 # Virtual environments
 venv/
 .venv/
 ENV/
 env/
+.conda/
+conda-env/
 
-# IDEs
-.idea/
-.vscode/
-*.swp
-*.swo
-*~
-.project
-.pydevproject
-.settings/
+# ============================================================================
+# TESTING & COVERAGE
+# ============================================================================
 
-# Testing
 .pytest_cache/
 .coverage
+.coverage.*
 htmlcov/
 .tox/
 .nox/
-
-# MyPy
-.mypy_cache/
-
-# Environments
-.env
-.env.local
-.env.*.local
-*.env
-
-# Logs
-*.log
-logs/
-data/logs/
-
-# Database
-*.db
-*.sqlite
-*.sqlite3
-data/attacks.db
-
-# Uploaded files and quarantine
-data/uploads/
-data/quarantine/
-
-# ML Models (large files)
-ml/models/*.pkl
-ml/models/*.joblib
-*.h5
-*.onnx
-
-# Certificates
-*.pem
-*.key
-*.crt
-*.csr
-certs/
-
-# GeoIP databases
-*.mmdb
-
-# Node modules (dashboard)
-node_modules/
-dashboard/node_modules/
-
-# Dashboard build
-dashboard/dist/
-
-# OS files
-.DS_Store
-Thumbs.db
-
-# Secrets
-secrets/
-*.secret
-
-# Docker
-.docker/
-
-# Alembic versions (keep tracked but ignore auto-generated)
-# alembic/versions/*.py
-
-# Temporary files
-tmp/
-temp/
-*.tmp
-*.bak
-
-# Coverage reports
 coverage.xml
 *.cover
+*.coverage
+nosetests.xml
+test-results/
+junit.xml
 
-# Jupyter notebooks checkpoints
+# ============================================================================
+# IDE & EDITOR FILES
+# ============================================================================
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# JetBrains (PyCharm, etc.)
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Vim/Neovim
+*.swp
+*.swo
+*.swn
+*~
+.netrwhist
+tags
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# ============================================================================
+# NODE.JS / DASHBOARD
+# ============================================================================
+
+node_modules/
+dashboard/node_modules/
+.npm/
+.yarn/
+.pnpm-store/
+
+# Build outputs
+dashboard/dist/
+dashboard/build/
+.next/
+.nuxt/
+
+# Package locks (optional - uncomment to ignore)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# ============================================================================
+# DOCKER & CONTAINERS
+# ============================================================================
+
+.docker/
+docker-compose.override.yml
+docker-compose.local.yml
+*.tar
+docker/certs/
+
+# ============================================================================
+# OS-SPECIFIC FILES
+# ============================================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+
+# ============================================================================
+# TEMPORARY & CACHE FILES
+# ============================================================================
+
+tmp/
+temp/
+.tmp/
+.temp/
+*.tmp
+*.temp
+*.bak
+*.backup
+*.cache
+.cache/
+*.pid
+
+# ============================================================================
+# DOCUMENTATION BUILD (keep source, ignore build)
+# ============================================================================
+
+docs/_build/
+docs/build/
+site/
+.mkdocs/
+
+# ============================================================================
+# MYPY & TYPE CHECKING
+# ============================================================================
+
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pytype/
+
+# ============================================================================
+# JUPYTER NOTEBOOKS
+# ============================================================================
+
 .ipynb_checkpoints/
+*.ipynb_checkpoints
+profile_default/
+ipython_config.py
+
+# ============================================================================
+# MISC DEVELOPMENT FILES
+# ============================================================================
+
+# Local configuration overrides
+config.local.yml
+config.local.yaml
+settings.local.py
+local_settings.py
+
+# Profiling data
+*.prof
+*.lprof
+profile_output/
+
+# Benchmark results
+benchmarks/results/
+
+# ============================================================================
+# EXPLICITLY TRACKED (DO NOT IGNORE)
+# ============================================================================
+
+# Keep these files even if patterns above match
+!.gitkeep
+!.env.example
+!requirements.txt
+!requirements-dev.txt
+!alembic/versions/.gitkeep
