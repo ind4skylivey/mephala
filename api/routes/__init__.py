@@ -1,3 +1,5 @@
-"""API Routes - Endpoint definitions."""
+"""API Routes Package."""
 
-__all__ = []
+from api.routes import attacks, stats, websocket
+
+__all__ = ["attacks", "stats", "websocket"]

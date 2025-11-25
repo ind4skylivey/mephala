@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+}
+
+.card {
+  @apply bg-gray-800 rounded-lg shadow-lg p-6;
+}
+
+.btn {
+  @apply px-4 py-2 rounded-lg font-medium transition-colors;
+}
+
+.btn-primary {
+  @apply bg-primary text-white hover:bg-blue-600;
+}
+
+.btn-danger {
+  @apply bg-danger text-white hover:bg-red-600;
+}
+
+.severity-critical { @apply text-red-500; }
+.severity-high { @apply text-orange-500; }
+.severity-medium { @apply text-yellow-500; }
+.severity-low { @apply text-green-500; }
