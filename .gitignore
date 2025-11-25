@@ -1,0 +1,122 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+.venv/
+ENV/
+env/
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# MyPy
+.mypy_cache/
+
+# Environments
+.env
+.env.local
+.env.*.local
+*.env
+
+# Logs
+*.log
+logs/
+data/logs/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+data/attacks.db
+
+# Uploaded files and quarantine
+data/uploads/
+data/quarantine/
+
+# ML Models (large files)
+ml/models/*.pkl
+ml/models/*.joblib
+*.h5
+*.onnx
+
+# Certificates
+*.pem
+*.key
+*.crt
+*.csr
+certs/
+
+# GeoIP databases
+*.mmdb
+
+# Node modules (dashboard)
+node_modules/
+dashboard/node_modules/
+
+# Dashboard build
+dashboard/dist/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Secrets
+secrets/
+*.secret
+
+# Docker
+.docker/
+
+# Alembic versions (keep tracked but ignore auto-generated)
+# alembic/versions/*.py
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak
+
+# Coverage reports
+coverage.xml
+*.cover
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
