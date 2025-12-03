@@ -1,0 +1,55 @@
+name: Track Forks and Clones
+
+on:
+  fork:
+  schedule:
+    - cron: "0 6 * * 1" # weekly, Mondays at 06:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  detect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Regenerate fingerprint
+        run: python .github/scripts/gen_fingerprint.py
+
+      - name: Search GitHub for watermark
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          WATERMARK="MEPAHLA-FP-2025-REPLACE-ME-WITH-256BIT-HEX"
+          QUERY="${WATERMARK}+in:file"
+          gh api -q '.items | length' "search/code?q=${QUERY}" > /tmp/match_count
+          gh api -q '.items[].repository.full_name' "search/code?q=${QUERY}" | sort -u > /tmp/match_repos || true
+          echo "Match count: $(cat /tmp/match_count)"
+          cat /tmp/match_repos || true
+
+      - name: Notify if matches found
+        if: ${{ secrets.WATCH_WEBHOOK_URL != '' }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          WATCH_WEBHOOK_URL: ${{ secrets.WATCH_WEBHOOK_URL }}
+        run: |
+          COUNT=$(cat /tmp/match_count)
+          if [ "$COUNT" -gt 0 ]; then
+            REPOS=$(cat /tmp/match_repos | tr '\n' ',' | sed 's/,$//')
+            PAYLOAD=$(jq -n --arg tag "MEPAHLA-FP-2025-REPLACE-ME-WITH-256BIT-HEX" \
+                            --arg count "$COUNT" \
+                            --arg repos "$REPOS" \
+                            '{fixed_tag:$tag, match_count:($count|tonumber), repositories:($repos|split(",")), event:"fork-scan"}')
+            curl -sSf -X POST -H "Content-Type: application/json" -d "$PAYLOAD" "$WATCH_WEBHOOK_URL"
+          else
+            echo "No matches detected; skipping webhook."
+          fi
